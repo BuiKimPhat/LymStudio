@@ -17,19 +17,17 @@ type Post = {
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
-      <main style={{ margin: '3rem' }}>
-        <h1>Hello World! 👋🏻 </h1>
-        <ul>
-          {/* Render each post with a link to the content page */}
-          {posts.map(post => (
-            <li key={post.id}>
-              <Link href={`/post/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </main>
+      <h1>Hello World! 👋🏻 </h1>
+      <ul>
+        {/* Render each post with a link to the content page */}
+        {posts.map(post => (
+          <li key={post.id}>
+            <Link href={`/post/${post.slug}`}>
+              <a>{post.title}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

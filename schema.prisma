@@ -18,3 +18,24 @@ model Post {
   slug    String @unique @default("")
   content String @default("")
 }
+
+model User {
+  id       String  @id @default(cuid())
+  name     String  @default("")
+  email    String  @unique @default("")
+  password String?
+  isAdmin  Boolean @default(false)
+}
+
+model Banner {
+  id    String  @id @default(cuid())
+  image String?
+  url   String  @default("")
+}
+
+model Product {
+  id          String @id @default(cuid())
+  name        String @default("")
+  total       Int?
+  description String @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
+}

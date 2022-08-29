@@ -1,9 +1,30 @@
+/* Variables */
+:root {
+  --bg-color: #f8ebf5;
+  --navbar-color: #850E35;
+  --navlink-color: #FFF5E4;
+  --navlink-hover-color: #EE6983;
+  --navlink-active-color: #FFC4C4
+}
+/* Layout */
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--bg-color);
+}
+
+html,
+body,
+div#__next {
+  min-height: 100vh;
+}
+
+main {
+  min-height: 72vh;
 }
 
 a {
@@ -14,6 +35,35 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Navbar */
+nav {
+  background-color: var(--navbar-color);
+}
+.nav-link {
+  color: var(--navlink-color);
+}
+.nav-link.active {
+  color: var(--navlink-active-color) !important;
+}
+.nav-link:hover{
+  color: var(--navlink-hover-color);
+}
+
+/* Footer */
+
+footer {
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  height: 165px;
+  margin-top: -165px;
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {

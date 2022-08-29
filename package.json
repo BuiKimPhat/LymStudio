@@ -11,10 +11,15 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@keystone-6/auth": "^4.0.1",
+    "@keystone-6/cloudinary": "^4.0.1",
     "@keystone-6/core": "^2.2.0",
+    "@keystone-6/fields-document": "^4.1.0",
     "bootstrap": "5.2.0",
+    "dotenv": "^16.0.1",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
