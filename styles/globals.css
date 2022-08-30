@@ -32,6 +32,13 @@ a {
   text-decoration: none;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+
 * {
   box-sizing: border-box;
 }

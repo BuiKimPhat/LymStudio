@@ -1,11 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 export default function Navbar() {
   return (
     <>
-      <div className="container">
+      <div className="container d-flex">
         <img src="./lymlogo.png" alt="LymStudio logo" height="125" />
+        <div className="ml-auto my-auto">
+          {/* TODO: Cart, Login, Signup */}
+        </div>
       </div>
       <nav className="navbar navbar-dark navbar-expand-md">
         <div className="container">
@@ -29,7 +33,7 @@ export default function Navbar() {
             </ul>
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search" />
-                <button className="btn btn-outline-light" type="submit"><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
+              <button className="btn btn-outline-light" type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
             </form>
           </div>
         </div>
