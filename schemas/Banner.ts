@@ -15,7 +15,9 @@ const Banner = list({
       cloudinary: cloudinaryInfo,
     }),
     url: text(),
-    createdAt: timestamp(),
+    createdAt: timestamp({
+      defaultValue: { kind: "now" }
+    }),
   }
 });
 export default Banner;

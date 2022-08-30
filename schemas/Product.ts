@@ -1,5 +1,5 @@
 import { list } from '@keystone-6/core';
-import { text, integer, bigInt, relationship, timestamp } from '@keystone-6/core/fields';
+import { text, integer, relationship, timestamp } from '@keystone-6/core/fields';
 import { document } from '@keystone-6/fields-document';
 import { cloudinaryImage } from '@keystone-6/cloudinary';
 
@@ -13,9 +13,25 @@ const cloudinaryInfo = {
 const Product = list({
     fields: {
         name: text(),
-        total: integer(),
-        description: document(),
-        price: bigInt(),
+        total: integer({
+            validation: {
+                isRequired: true,
+            },
+        }),
+        description: document({
+            formatting: true,
+            dividers: true,
+            links: true,
+            layouts: [
+                [1, 1],
+                [1, 1, 1],
+            ],
+        }),
+        price: integer({
+            validation: {
+                isRequired: true,
+            },
+        }),
         type: relationship({
             ref: 'ProductType.products',
             many: false,
@@ -25,9 +41,11 @@ const Product = list({
         }),
         images: relationship({
             ref: 'ProductImage.product',
-            many: true
+            many: true,
         }),
-        createdAt: timestamp(),
+        createdAt: timestamp({
+            defaultValue: { kind: "now" }
+        }),
     }
 })
 

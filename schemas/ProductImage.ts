@@ -18,7 +18,9 @@ const ProductImage = list({
             ref: 'Product.images',
             many: false,
         }),
-        createdAt: timestamp(),
+        createdAt: timestamp({
+            defaultValue: { kind: "now" }
+        }),
     },
 })
 

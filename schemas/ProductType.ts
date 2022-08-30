@@ -8,7 +8,9 @@ const ProductType = list({
             ref: 'Product.type',
             many: true,
         }),
-        createdAt: timestamp(),
+        createdAt: timestamp({
+            defaultValue: { kind: "now" }
+        }),
     },
 })
 

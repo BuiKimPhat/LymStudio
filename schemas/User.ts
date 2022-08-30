@@ -7,7 +7,9 @@ const User = list({
     email: text({ isIndexed: 'unique' }),
     password: password(),
     isAdmin: checkbox(),
-    createdAt: timestamp(),
+    createdAt: timestamp({
+      defaultValue: { kind: "now" }
+    }),
   },
 })
 
