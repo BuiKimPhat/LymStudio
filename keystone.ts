@@ -6,6 +6,8 @@ import { statelessSessions } from '@keystone-6/core/session';
 import User from './schemas/User'
 import Banner from './schemas/Banner'
 import Product from './schemas/Product'
+import ProductType from './schemas/ProductType'
+import ProductImage from './schemas/ProductImage'
 
 require('dotenv').config()
 
@@ -28,7 +30,7 @@ const Post: Lists.Post = list({
 });
 
 const lists = {
-  Post, User, Banner, Product
+  Post, User, Banner, Product, ProductType, ProductImage
 }
 
 export default withAuth(
