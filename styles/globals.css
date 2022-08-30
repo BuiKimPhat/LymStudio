@@ -6,7 +6,8 @@
   --navlink-hover-color: #EE6983;
   --navlink-active-color: #FFC4C4
 }
-/* Layout */
+
+/* Layout override */
 
 html,
 body {
@@ -25,6 +26,7 @@ div#__next {
 
 main {
   min-height: 72vh;
+  padding-bottom: 165px;
 }
 
 a {
@@ -35,7 +37,17 @@ a {
 .ml-auto {
   margin-left: auto;
 }
+
 .mr-auto {
+  margin-right: auto;
+}
+
+.carousel-item {
+  max-height: 90vh;
+}
+
+.row {
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -43,17 +55,60 @@ a {
   box-sizing: border-box;
 }
 
+/* Home */
+
+.product-type-card {
+  height: 200px;
+  background-size: 100% 200px;
+}
+
+#clothing {
+  background-image: url("../public/clothing.jpg");
+  color: white;
+}
+
+#accessories {
+  background-image: url("../public/accessories.jpg");
+  color: white;
+}
+
+#others {
+  background-image: url("../public/others.webp");
+  color: black;
+}
+
+.text-divider {
+  margin: 2em 0;
+  line-height: 0;
+  text-align: center;
+}
+
+.text-divider span {
+  padding: 1rem;
+  background-color: var(--bg-color);
+}
+
+.text-divider:before {
+  content: "";
+  display: block;
+  border-top: 2px solid var(--navbar-color);
+  border-bottom: 2px solid var(--navbar-color);
+}
+
 /* Navbar */
 nav {
   background-color: var(--navbar-color);
 }
+
 .nav-link {
   color: var(--navlink-color);
 }
+
 .nav-link.active {
   color: var(--navlink-active-color) !important;
 }
-.nav-link:hover{
+
+.nav-link:hover {
   color: var(--navlink-hover-color);
 }
 
@@ -76,6 +131,7 @@ footer {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
