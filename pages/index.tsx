@@ -26,8 +26,9 @@ type Product = {
 export default function Home({ banners, products }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
-      <Carousel items={banners} />
-
+      {banners.length > 0 ? (
+        <Carousel items={banners} />
+      ) : ""}
       <div className='container row my-4'>
         <div className="col-sm-4">
           <Link href="/"><a>
