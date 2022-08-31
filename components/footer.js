@@ -4,24 +4,23 @@ import {
   faFacebook, faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function Footer() {
-  return (
-    <footer>
-      <div className="p-4 text-center">
-          <div>
-            <div><b><i>Địa chỉ: </i></b>98 Nguyễn Lương Bằng, Q. Liên Chiểu, Đà Nẵng</div>
-            <div><b><i>Mở cửa: </i></b>9h - 22h</div>
-          </div>
-          <div className="p-2">
-            <a className="m-2" href="https://www.facebook.com/Lymstudio.womenfashion" target="_blank">
-              <FontAwesomeIcon className="brand-icon" icon={faFacebook} />
-            </a>
-            <a className="m-2" href="https://www.instagram.com/lymstudios/" target="_blank">
-              <FontAwesomeIcon className="brand-icon" icon={faInstagram} />
-            </a>
-          </div>
-        <h6 className="text-muted">© 2022 Copyright: Lym Studio</h6>
+const Footer = () => (
+  <footer>
+    <div className="p-4 text-center">
+      <div>
+        <div><b><i>Địa chỉ: </i></b>98 Nguyễn Lương Bằng, Q. Liên Chiểu, Đà Nẵng</div>
+        <div><b><i>Mở cửa: </i></b>9h - 22h</div>
       </div>
-    </footer>
-  )
-}
+      <div className="p-2">
+        <a className="m-2" href="https://www.facebook.com/Lymstudio.womenfashion" target="_blank">
+          <FontAwesomeIcon className="brand-icon" icon={faFacebook} />
+        </a>
+        <a className="m-2" href="https://www.instagram.com/lymstudios/" target="_blank">
+          <FontAwesomeIcon className="brand-icon" icon={faInstagram} />
+        </a>
+      </div>
+      <h6 className="text-muted">© 2022 Copyright: Lym Studio</h6>
+    </div>
+  </footer>
+)
+export default Footer;

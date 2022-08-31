@@ -4,7 +4,7 @@
   --navbar-color: #850E35;
   --navlink-color: #FFF5E4;
   --navlink-hover-color: #EE6983;
-  --navlink-active-color: #FFC4C4
+  --navlink-active-color: #FFC4C4;
 }
 
 /* Layout override */
@@ -74,7 +74,7 @@ a {
 
 #others {
   background-image: url("../public/others.webp");
-  color: black;
+  color: var(--navbar-color);
 }
 
 .text-divider {
@@ -91,8 +91,16 @@ a {
 .text-divider:before {
   content: "";
   display: block;
-  border-top: 2px solid var(--navbar-color);
-  border-bottom: 2px solid var(--navbar-color);
+  border-top: 2px solid var(--navlink-hover-color);
+  border-bottom: 2px solid var(--navlink-hover-color);
+}
+
+.product-card {
+  height: 100%;
+}
+
+.product-card > img {
+  height: 75%;
 }
 
 /* Navbar */
