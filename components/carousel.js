@@ -18,7 +18,7 @@ const Carousel = props => (
         <div className="carousel-inner">
             {props.items.map((banner, index) => (
                 <div key={banner.id} className={`carousel-item ${index == 0 ? "active" : ""}`} data-bs-interval="3000">
-                    <Link href={banner.url}><a>
+                    <Link href={banner.url ? banner.url : "#"}><a>
                         <img src={banner.image.publicUrl} className="d-block w-100" alt="Khuyến mãi" />
                     </a></Link>
                 </div>

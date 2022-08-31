@@ -21,16 +21,8 @@ const session = statelessSessions({
   secret: process.env.SESSION_COOKIES_SECRET || "__lymstudiosecret____lymstudiosecret__",
 });
 
-const Post: Lists.Post = list({
-  fields: {
-    title: text({ validation: { isRequired: true } }),
-    slug: text({ isIndexed: 'unique', isFilterable: true }),
-    content: text(),
-  },
-});
-
 const lists = {
-  Post, User, Banner, Product, ProductType, ProductImage
+  User, Banner, Product, ProductType, ProductImage
 }
 
 export default withAuth(

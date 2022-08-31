@@ -15,7 +15,7 @@ const ProductCard = props => (
             <img className="card-img-top" src={props.thumbnailSrc} alt="Product thumbnail" />
             <div className="card-body">
                 <h5 className="card-title text-center">{props.name}</h5>
-                <p className="card-text text-center"><b>{NumberDotFormat(props.price)} VNĐ</b></p>
+                <p className="card-text text-center">{NumberDotFormat(props.price)} VNĐ</p>
             </div>
         </div>
     </a></Link>

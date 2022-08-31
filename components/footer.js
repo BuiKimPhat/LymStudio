@@ -8,8 +8,8 @@ const Footer = () => (
   <footer>
     <div className="p-4 text-center">
       <div>
-        <div><b><i>Địa chỉ: </i></b>98 Nguyễn Lương Bằng, Q. Liên Chiểu, Đà Nẵng</div>
-        <div><b><i>Mở cửa: </i></b>9h - 22h</div>
+        <h6><b><i>Địa chỉ: </i></b>98 Nguyễn Lương Bằng, Q. Liên Chiểu, Đà Nẵng</h6>
+        <h6><b><i>Mở cửa: </i></b>9h - 22h</h6>
       </div>
       <div className="p-2">
         <a className="m-2" href="https://www.facebook.com/Lymstudio.womenfashion" target="_blank">
