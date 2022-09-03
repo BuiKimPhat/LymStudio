@@ -72,7 +72,7 @@ export async function getStaticProps() {
   const banners = (await query.Banner.findMany({ query: 'id url image { publicUrl }' })) as Banner[];
   const products = (await query.Product.findMany({
     orderBy: [{ createdAt: 'desc' }],
-    take: 6,
+    // take: 6,
     query: 'id name price thumbnail { publicUrl }'
   })) as Product[];
   return {

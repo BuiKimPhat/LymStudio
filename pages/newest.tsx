@@ -29,7 +29,7 @@ export default function Newest({ products }: InferGetStaticPropsType<typeof getS
 export async function getStaticProps() {
   const products = (await query.Product.findMany({
     orderBy: [{ createdAt: 'desc' }],
-    take: 32,
+    // take: 32,
     query: 'id name price thumbnail { publicUrl }'
   })) as Product[];
   return {

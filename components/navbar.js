@@ -5,6 +5,13 @@ import Link from "next/link";
 
 const Navbar = () => {
   const router = useRouter();
+  const handleSearch = e => {
+    e.preventDefault();
+    router.push({
+      pathname: '/search',
+      query: { q: e.target.searchInput.value }
+    });
+  };
   return (
     <>
       <div className="container d-flex">
@@ -52,8 +59,8 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search" />
+            <form onSubmit={handleSearch} className="d-flex" role="search">
+              <input className="form-control me-2" name="searchInput" type="search" placeholder="Tìm kiếm" aria-label="Search" />
               <button className="btn btn-outline-light" type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
             </form>
           </div>

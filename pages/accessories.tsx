@@ -36,7 +36,7 @@ export async function getStaticProps() {
         }
     },
     orderBy: [{ createdAt: 'desc' }],
-    take: 32,
+    // take: 32,
     query: 'id name price thumbnail { publicUrl }'
   })) as Product[];
   return {
