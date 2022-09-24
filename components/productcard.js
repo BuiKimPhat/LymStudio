@@ -12,7 +12,7 @@ import { NumberDotFormat } from '../utils/utils'
 const ProductCard = props => (
     <Link href={props.href}><a>
         <div className="card product-card">
-            <img className="card-img-top" src={props.thumbnailSrc} alt="Product thumbnail" />
+            <Image className="card-img-top" src={props.thumbnailSrc} alt="Product thumbnail" />
             <div className="card-body">
                 <h5 className="card-title text-center">{props.name}</h5>
                 <p className="card-text text-center">{NumberDotFormat(props.price)} VNĐ</p>
