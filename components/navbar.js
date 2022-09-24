@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from 'next/image';
 
 const Navbar = () => {
   const router = useRouter();

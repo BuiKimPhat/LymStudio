@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { NumberDotFormat } from '../utils/utils'
+import Image from 'next/image';
 
 /*
     props: {
