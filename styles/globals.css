@@ -77,6 +77,11 @@ a {
   box-sizing: border-box;
 }
 
+.product-card > div.card-img-top {
+  position: relative;
+  height: 250px;
+}
+
 /* Home */
 
 .product-type-card {
@@ -115,14 +120,6 @@ a {
   display: block;
   border-top: 2px solid var(--navlink-hover-color);
   border-bottom: 2px solid var(--navlink-hover-color);
-}
-
-.product-card {
-  height: 100%;
-}
-
-.product-card > img {
-  height: 75%;
 }
 
 /* Product */

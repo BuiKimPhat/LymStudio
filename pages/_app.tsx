@@ -9,9 +9,11 @@ import Layout from '../components/layout'
 import React, { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(()=>{
-      import("bootstrap/dist/js/bootstrap");
-  },[])
+  useEffect(() => {
+    typeof document !== undefined 
+    ? require('bootstrap/dist/js/bootstrap') 
+    : null
+  }, [])
   return (
     <Layout>
       <Component {...pageProps} />

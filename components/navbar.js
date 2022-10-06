@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container d-flex">
         <Link href="/">
           <a>
-            <Image src="/lymlogo.png" alt="LymStudio logo" height="125" />
+            <Image src="/lymlogo.png" alt="LymStudio logo" width="125" height="125" />
           </a>
         </Link>
         <div className="ml-auto my-auto">
